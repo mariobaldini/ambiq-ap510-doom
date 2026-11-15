@@ -36,6 +36,9 @@ extern wad_file_class_t win32_wad_file;
 #ifdef HAVE_MMAP
 extern wad_file_class_t posix_wad_file;
 #endif 
+#ifdef DG_MEM_WAD
+extern wad_file_class_t mem_wad_file;
+#endif
 
 static wad_file_class_t *wad_file_classes[] = 
 {
@@ -46,6 +49,9 @@ static wad_file_class_t *wad_file_classes[] =
 */
 #ifdef HAVE_MMAP
     &posix_wad_file,
+#endif
+#ifdef DG_MEM_WAD
+    &mem_wad_file,
 #endif
     &stdc_wad_file,
 };

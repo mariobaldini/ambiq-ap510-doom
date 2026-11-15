@@ -1,0 +1,4 @@
+#ifndef ZEPHYR_COMPAT_CACHE_H
+#define ZEPHYR_COMPAT_CACHE_H
+
+#endif

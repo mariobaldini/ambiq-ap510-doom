@@ -1,0 +1,12 @@
+[submodule "ambiq/hal_ambiq"]
+	path = ambiq/hal_ambiq
+	url = https://github.com/zephyrproject-rtos/hal_ambiq.git
+	shallow = true
+[submodule "ambiq/ambiqhal_ambiq"]
+	path = ambiq/ambiqhal_ambiq
+	url = https://github.com/AmbiqMicro/ambiqhal_ambiq.git
+	shallow = true
+[submodule "ambiq/cmsis"]
+	path = ambiq/cmsis
+	url = https://github.com/zephyrproject-rtos/cmsis.git
+	shallow = true

@@ -130,11 +130,21 @@ static byte *AutoAllocMemory(int *size, int default_ram, int min_ram)
     return zonemem;
 }
 
+#ifdef DG_STATIC_ZONE
+byte *DG_ZoneBase(int *size);
+#endif
+
 byte *I_ZoneBase (int *size)
 {
     byte *zonemem;
     int min_ram, default_ram;
     int p;
+
+#ifdef DG_STATIC_ZONE
+    zonemem = DG_ZoneBase(size);
+    printf("zone memory: %p, %x allocated for zone\n", zonemem, *size);
+    return zonemem;
+#endif
 
     //!
     // @arg <mb>
